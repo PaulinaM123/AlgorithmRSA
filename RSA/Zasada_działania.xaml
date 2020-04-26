@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="RSA.Zasada_działania"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RSA"
+             mc:Ignorable="d" 
+             d:DesignHeight="414" d:DesignWidth="817.45">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="20,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="72" Width="686"  Foreground="#FF0D50DE" FontSize="14"><Run FontWeight="Bold" Text="&#x9;"/><Run FontWeight="Bold" Text="RSA"/><Span Foreground="Black"><Run Text=" jest asymetrycznym algorytmem  kryptograficzny z kluczem publicznym. Jego nazwa pochodzi od pierwszych liter nazwisk twórców "/></Span><Span Foreground="Black" FontStyle="Italic"><Run Text="(Rivest–Shamir–Adleman)"/></Span><Span Foreground="Black"><Run Text=". Algorytm można również stosować do podpisów cyfrowych."/></Span><LineBreak/><Span Foreground="Black"><Run Text="Generator uważa się za bezpieczny, jeżeli iloczyn liczb p i q jest dostatecznie duży."/></Span><LineBreak/><Run Text=""/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="20,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="72" Width="742"><Span><Run Text="Algorytm dzia"/></Span><Span FontFamily="Times-Roman"><Run Text="ł"/></Span><Span><Run Text="a na nast"/></Span><Span FontFamily="Times-Roman"><Run Text="ę"/></Span><Span><Run Text="puj"/></Span><Span FontFamily="Times-Roman"><Run Text="ą"/></Span><Span><Run Text="cej zasadzie:"/></Span><LineBreak/><Run Text="p,q – liczby pierwsze"/><Run Text=" czterocyfrowe"/><Run Text=" (zakres zmiennej Integer)"/><LineBreak/><Run Text="n"/><Run Text=" – iloczyn liczb p i q,"/><LineBreak/><Span><Run Text="e – liczba ca"/></Span><Span FontFamily="Times-Roman"><Run Text="ł"/></Span><Span><Run Text="kowita wzgl"/></Span><Span FontFamily="Times-Roman"><Run Text="ę"/></Span><Span><Run Text="dnie pierwsza z (p"/></Span><Span FontFamily="Times-Roman"><Run Text="−"/></Span><Span><Run Text="1)(q"/></Span><Span FontFamily="Times-Roman"><Run Text="−"/></Span><Run Text="1)"/><LineBreak/><Span><Run/></Span><LineBreak/><Span><Run/></Span><LineBreak/><Span><Run/></Span><LineBreak/><Span><Run/></Span><LineBreak/><LineBreak/><Run Text=""/></TextBlock>
+        <Image HorizontalAlignment="Left" Height="188" Margin="110,192,0,0" VerticalAlignment="Top" Width="542" Source="funkcje.PNG"/>
+
+    </Grid>
+</UserControl>

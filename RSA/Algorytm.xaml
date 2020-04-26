@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="RSA.Algorytm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RSA"
+             mc:Ignorable="d" 
+             d:DesignHeight="414" d:DesignWidth="817.45">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="407*"/>
+            <ColumnDefinition Width="402*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txt_p"  Height="23" Margin="33,53,0,0" Width="120"/>
+        <TextBox x:Name="txt_q"  Height="23" Margin="33,83,0,0" Width="120"/>
+        <Button x:Name="P2_OK" Content="OK" Height="23"  Margin="155,83,0,0" Width="74" Click="txt_q_OK_Click" />
+        <Button x:Name="P1_OK" Content="OK" Height="23"  Margin="155,53,0,0" Width="74" Click="txt_p_OK_Click" />
+        <Button x:Name="wczytaj_p" Content="Wczytaj" Height="23"  Margin="230,53,0,0" Width="76" Click="wczytaj_p_Click" Grid.Column="0" />
+        <Button x:Name="zapisz_p" Content="Zapisz" Height="23"  Margin="310,53,0,0" Width="76" Click="zapisz_p_Click" Grid.Column="0" />
+        <Button x:Name="wczytaj_q" Content="Wczytaj" Height="23"  Margin="230,83,0,0" Width="76" Click="wczytaj_q_Click" Grid.Column="0" />
+        <Button x:Name="zapisz_q" Content="Zapisz" Height="23"  Margin="310,83,0,0" Width="76" Click="zapisz_q_Click" Grid.Column="0" />
+        <Button x:Name="wczytaj_e" Content="Wczytaj" Height="23"  Margin="230,135,0,0" Width="76" Click="wczytaj_e_Click" Grid.Column="0" />
+        <Button x:Name="zapisz_e" Content="Zapisz" Height="23"  Margin="310,135,0,0" Width="76" Click="zapisz_e_Click" Grid.Column="0" />
+        <Button x:Name="wczytaj_n" Content="Wczytaj" Height="23"  Margin="230,165,0,0" Width="76" Click="wczytaj_n_Click" Grid.Column="0" />
+        <Button x:Name="zapisz_n" Content="Zapisz" Height="23"  Margin="310,165,0,0" Width="76" Click="zapisz_n_Click" Grid.Column="0" />
+        <Label Content="p" HorizontalAlignment="Left" Margin="15,52,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Width="18"/>
+        <Label Content="q" HorizontalAlignment="Left" Margin="15,81,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="18"/>
+        <Label Content="Wprowadź dwie czterocyfrowe&#xD;&#xA;      liczby pierwsze p i q.&#xA;" HorizontalAlignment="Left" Margin="26,3,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="194" Height="58"/>
+        <TextBox x:Name="txt_e"  Height="23" Margin="34,135,0,0" Width="120" />
+        <TextBox x:Name="txt_n"  Height="23" Margin="34,165,0,0" Width="120" />
+        <Label Content="e" HorizontalAlignment="Left" Margin="16,134,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Width="17"/>
+        <Label Content="n" HorizontalAlignment="Left" Margin="16,163,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="18"/>
+        <Button x:Name="Publiczny" Content="Wygeneruj" Height="23"  Margin="158,147,0,0" Width="71" Click="Puliczny_wygeneruj_Click" />
+        <Label Content="Klucz publiczny (e,n)" HorizontalAlignment="Left" Margin="32,110,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="135"/>
+        <TextBox x:Name="txt_pom"  Height="22" Margin="112,228,0,0" Width="135" IsEnabled="False"/>
+        <ComboBox x:Name="combo" HorizontalAlignment="Left" Margin="37,228,0,0" VerticalAlignment="Top" Width="75" SelectionChanged="ComboBox_SelectionChanged" Height="22">
+            <ComboBoxItem>nwd(e,a)</ComboBoxItem>
+            <ComboBoxItem >a</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Zmienne pomocnicze" HorizontalAlignment="Left" Margin="52,198,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="142"/>
+        <TextBox x:Name="txt_d"  Height="24" Margin="33,280,0,0" Width="120" />
+        <Label Content="d" HorizontalAlignment="Left" Margin="15,279,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" Width="17" Height="32"/>
+        <Button x:Name="Prywatny" Content="Wygeneruj" Height="24"  Margin="157,282,0,0" Width="71" Click="Prywatny_wygeneruj_Click" />
+        <Label Content="Klucz prywatny d" HorizontalAlignment="Left" Margin="31,254,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="135" Height="32"/>
+        <Label Content="Wiadomość do zaszyfrowania" HorizontalAlignment="Left" Margin="4,1,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="198" Height="32" Grid.Column="1"/>
+        <TextBox x:Name="do_zaszyfrowania" Grid.Column="1" HorizontalAlignment="Left" Margin="11,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="360"/>
+        <Button x:Name="wczytaj_tekst" Content="Wczytaj" Height="24"  Margin="11,114,0,0" Width="76" Click="wczytaj_tekst_Click" Grid.Column="1" />
+        <Button x:Name="zapisz_tekst" Content="Zapisz" Height="24"  Margin="90,114,0,0" Width="76" Click="zapisz_tekst_Click" Grid.Column="1" />
+        <Button x:Name="szyfruj" Content="Szyfruj" Height="24"  Margin="169,114,0,0" Width="76" Click="Szyfruj_Click" Grid.Column="1" />
+        <Label Content="Wiadomość zaszyfrowana" HorizontalAlignment="Left" Margin="4,140,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Normal" RenderTransformOrigin="0.204,0.444" Width="198" Height="32" Grid.Column="1"/>
+        <TextBox x:Name="zaszyfrowana" Grid.Column="1" HorizontalAlignment="Left" Margin="11,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="360"/>
+        <Button x:Name="wczytaj_zaszyfrowana" Content="Wczytaj" Height="24"  Margin="11,250,0,0" Width="76" Click="wczytaj_zaszyfrowana_Click" Grid.Column="1" />
+        <Button x:Name="zapisz_zaszyfrowana" Content="Zapisz" Height="24"  Margin="90,250,0,0" Width="76" Click="zapisz_zaszyfrowana_Click" Grid.Column="1" />
+        <Button x:Name="deszyfruj" Content="Deszyfruj" Height="24"  Margin="169,250,0,0" Width="76" Click="Deszyfruj_Click" Grid.Column="1" />
+        <TextBox x:Name="zdeszyfrowana" Grid.Column="1" HorizontalAlignment="Left" Margin="12,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="360"/>
+        <Button x:Name="wczytaj_d" Content="Wczytaj" Height="23"  Margin="230,282,0,0" Width="76" Click="wczytaj_d_Click" Grid.Column="0" />
+        <Button x:Name="zapisz_d" Content="Zapisz" Height="23"  Margin="310,282,0,0" Width="76" Click="zapisz_d_Click" Grid.Column="0" />
+    </Grid>
+</UserControl>
